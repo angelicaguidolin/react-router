@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AboutUs from './pages/AboutUs'
 import PostBlog from './pages/PostBlog'
+import SinglePost from './pages/SinglePost'
+//LAYOUT
 import DefaultLayout from './layout/DefaultLayout'
 export default function App(){
       return(
@@ -14,6 +16,7 @@ export default function App(){
               <Route path="/" element={<HomePage />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/post-blog" element={<PostBlog />} />
+              <Route path="/post-blog/:id" element={<SinglePost/>} />
             </Route>
             </Routes>
         </BrowserRouter>
