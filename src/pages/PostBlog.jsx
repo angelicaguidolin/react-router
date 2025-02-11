@@ -14,10 +14,15 @@ export default function PostBlog(){
     return(
         <>
         {
-            postBlog.map((post)=> <li key={post.id}>
+            postBlog.map((post)=>
+   
+             <li key={post.id}>
+        <Link to = (`/post-blog/${post.id}`) >
+           <h1>{post.title}</h1> 
             <img src={post.image} alt={post.title} />
             <p>{post.content}</p>
-            {post.title}</li>)
+            <Link />
+            </li>)
         }
         </>
     )
